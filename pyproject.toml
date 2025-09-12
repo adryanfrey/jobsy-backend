@@ -1,0 +1,15 @@
+[project]
+name = "jobsy-agent"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "openai-agents>=0.3.0",
+    "supabase>=2.18.1",
+]
+
+[tool.uv.workspace]
+members = [
+    "test",
+]
