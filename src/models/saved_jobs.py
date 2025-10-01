@@ -1,9 +1,10 @@
 from pydantic import BaseModel, Field
-from uuid import UUID
+from uuid import UUID, uuid4
 from datetime import datetime, timezone
 
 
 class SavedJobs(BaseModel):
+    saved_job_id: UUID = Field(default_factory=uuid4)
     job_id: UUID
     user_id: UUID
     application_status: str  # TODO use literals
